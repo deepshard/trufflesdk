@@ -60,8 +60,7 @@ If you need something to build what you are dreaming of, let us know!
 
 
 ### Feedback! 
-- What do you need to build your Truffle app?
-- Let us know in the issues page!
+What do you need to build your Truffle app? Let us know in the issues page!
 
       
       
