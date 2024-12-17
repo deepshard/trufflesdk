@@ -21,7 +21,7 @@ Inside your application you are free to use the full power of our inference engi
   - That is, they must be serializable! Nested objects that are all serializable are okay, but you can't pass an instance of a webserver as a function parameter for example!
   - Unfortunately, to make the magic happen, type annotations for parameters and return values are required
     - e.g. `def MyTool(self, search_query: str, num_results: int) -> List[str]:` 
-- Tools are marked by decorators the `truffle.tool` decorator, which optionally can (and are highly encouraged to) have a description of the tool for the model, as well as an icon (for now Apple SF Symbols) to display in the client
+- Tools are marked by decorators the `truffle.tool` decorator
   - `truffle.tool` denotes the function, an optional (but highly recommended) description, and an icon (Apple SF Symbol for now)
      - e.g. `@truffle.tool("MyTool searches DuckDuckGo for relevant results", icon="magnifyingglass")`
   - `truffle.args` can optionally (but again, is highly recommended) be used to add descriptions to each parameter to aid the model in using the tool
