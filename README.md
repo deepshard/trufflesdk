@@ -3,6 +3,7 @@ An early preview, and home for feedback, for the soon to be released SDK for the
 This README and example app offer a taste of what creating agentic applications is like. 
 We intend to let the voice of the community drive post-launch development
 
+[Check out a sample app here!](https://github.com/deepshard/trufflesdk/blob/main/hisnameisyang.py)
 
 ### Overview
 
@@ -12,6 +13,7 @@ When developing your app, you can run it locally on your computer, and the Truff
 The Python SDK works by parsing your tools into a gRPC server at runtime, generating a method handler, as well as Protobuf messages for each tool's arguments and return types respectively. 
 This means that any language can be used to create a Truffle App, and we hope to listen to what early-users want for expanding the SDK's support outside of Python.
 
+Inside your application you are free to use the full power of our inference engine, access a vector datastore, request user input in the UI, and more! That means tools that use inference, tools that create files, tools that can do anything you dream up!  
 
 
 ### Tool Definitions
