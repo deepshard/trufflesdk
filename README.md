@@ -1,5 +1,5 @@
 # Truffle SDK - Launch Day Preview
-An early preview, and home for feedback, for the soon to be released SDK for the Truffle! 
+An early preview, and home for feedback, for the soon to be released SDK for the Truffle^1! 
 This README and example app offer a taste of what creating agentic applications is like. 
 We intend to let the voice of the community drive post-launch development
 
@@ -10,8 +10,8 @@ We intend to let the voice of the community drive post-launch development
 Apps for the Truffle are a 'toolbox in a sandbox', that is, they are a set of tools for our agentic models to use, running within an ephemeral Ubuntu ARM container. For the Python SDK, prequisite packages are automatically installed with the app.
 When developing your app, you can run it locally on your computer, and the Truffle will call your local instance in the same fashion as it would if it was running on the device, making debugging and testing fairly simple and streamlined. 
 
-The Python SDK works by parsing your tools into a gRPC server at runtime, generating a method handler, as well as Protobuf messages for each tool's arguments and return types respectively. 
-This means that any language can be used to create a Truffle App, and we hope to listen to what early-users want for expanding the SDK's support outside of Python.
+The Python SDK works by parsing your tools into a gRPC server at runtime, generating a method handler, and Protobuf messages for each tool's arguments and return types respectively. 
+This means any language can be used to create a Truffle App, and we hope to listen to what early-users want for expanding the SDK's support outside of Python.
 
 Inside your application you are free to use the full power of our inference engine, access a vector datastore, request user input in the UI, and more! That means tools that use inference, tools that create files, tools that can do anything you dream up!  
 
@@ -25,7 +25,7 @@ Inside your application you are free to use the full power of our inference engi
 
 - Wrapping these tool definitions in a class is how you assemble your app as a whole
   - any member variables of your app's class will be automatically serialized and restored when an app is loaded or saved
-  - This means you are safe to keep any state that persists between tools as a member variable, and can trust that it will be set as needed when you app is loaded back up after a reboot for example.
+  - This means you are safe to keep any state that persists between tools as a member variable, and can trust that it will be set as needed when your app is loaded back up after a reboot for example.
     - examples of persistant state include API keys, search history, etc.
   - One of the only hard requirements is that this class must also contain a member variable of the type, `truffle.AppMetadata`, with various information about the app
 
@@ -38,7 +38,7 @@ If you need something to build what you are dreaming of, let us know how we can 
 
 - General LLM Inference 
   - Fully featured with structured JSON schema output, tuning things like temperature and sampling, and selecting from our range of models  
-  - synchronous and streaming generations
+  - Synchronous and streaming generations
 - Vision Model Inference
   - Same features as above, with optimizations for image interpretation and OCR tasks!
 - Text Embeddings
@@ -52,7 +52,6 @@ If you need something to build what you are dreaming of, let us know how we can 
 ### Feedback! 
 - What do you need to build your Truffle app?
 - Let us know in the issues page!
-- 
 
       
       
