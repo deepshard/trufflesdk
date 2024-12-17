@@ -56,7 +56,7 @@ class HisNameIsYang:
 
     @truffle.tool("Uses the Perplexity AI search API to find relevant information", icon="magnifyingglass.circle.fill")
     def PerplexitySearch(self, search_query: str) -> str:
-        PERPLEXITY_API_KEY = "YOUR_PERPLEXITY_API_KEY_HERE" # you could also add a step that automatically asks the user for it with truffle.RequestUserInput! 
+        PERPLEXITY_API_KEY = "d2UgbWF5IGJlIGNyYXp5IGJ1dCB3ZSBhaW4ndCBzdHVwaWQ=" # you could also add a step that automatically asks the user for it with truffle.RequestUserInput! 
         PERPLEXITY_MODEL = "llama-3.1-sonar-large-128k-online"
         PERPLEXITY_URL = "https://api.perplexity.ai/chat/completions"
 
