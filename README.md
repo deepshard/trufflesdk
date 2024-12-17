@@ -22,14 +22,14 @@ Inside your application you are free to use the full power of our inference engi
   - Unfortunately, to make the magic happen, type annotations for parameters and return values are required
     - e.g. `def MyTool(self, search_query: str, num_results: int) -> List[str]:` 
 - Tools are marked by decorators the `truffle.tool` decorator
-  - `truffle.tool` denotes the function, an optional (but highly recommended) description, and an icon (Apple SF Symbol for now)
+  - `truffle.tool` denotes the function, an optional (but highly recommended) description, and an optional icon (Apple SF Symbol for now)
      - e.g. `@truffle.tool("MyTool searches DuckDuckGo for relevant results", icon="magnifyingglass")`
   - `truffle.args` can optionally (but again, is highly recommended) be used to add descriptions to each parameter to aid the model in using the tool
      - e.g. `@truffle.args(search_query='keywords or subjects to search for', num_results='the maximum number of results to return')`
 
 - To assemble an app, you simply wrap these tools in a class
-  - Any member variables of the class are automatically serialized and restored when an app is loaded or saved. This allows you to design stateful apps
-    - Any state from a task using the app will be automatically reloaded after a reboot
+  - Any member variables of the class are automatically serialized and stored allowing apps to be stateful
+    - State from a task using the app will be automatically serialized and restored when an app is loaded or saved
     - Examples of persistant state include API keys, search history, etc.
   - The class must contain a member variable of the type, `truffle.AppMetadata`, with the following information about the app:
     - **Full name:** A user facing name for the app
