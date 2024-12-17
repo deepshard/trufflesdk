@@ -17,7 +17,7 @@ class HisNameIsYang:
             description="That's my quant!", # user facing app description, also used to generate synthetic usage data for live classification in the UI
             name="yang", # the internal app name
             goal="Research, formulate, and execute quantitative strategies for trading cryptocurrencies.", # the goal, presented to the agentic model
-            icon_url="https://raw.githubusercontent.com/deepshard/trufflesdk/refs/heads/main/icon.png" # the primary icon for your app, a 512x512 PNG
+            icon_url="https://raw.githubusercontent.com/deepshard/trufflesdk/refs/heads/main/assets/icon.png" # the primary icon for your app, a 512x512 PNG
         )
         self.max_losses = 300000.0 # member variables can be used to store state between tool calls, and are saved and loaded automatically by the Truffle SDK on app instantiation/reload
 
