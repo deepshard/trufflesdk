@@ -1,5 +1,5 @@
 # Truffle SDK - Launch Day Preview
-An early preview, and home for feedback, for the soon to be released SDK for the Truffle^1! 
+This is early preview, and home for feedback, for the soon to be released SDK for the Truffle^1! 
 This README and example app offer a taste of what creating agentic applications is like. 
 We intend to let the voice of the community drive post-launch development
 
