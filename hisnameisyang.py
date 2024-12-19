@@ -3,12 +3,15 @@
 
 from typing import List, Dict, Any
 import os
+from dotenv import load_dotenv
 
 import pandas as pd
 import requests
 import json
 
 import truffle
+
+load_dotenv() 
 
 class HisNameIsYang:
     def __init__(self):
@@ -56,7 +59,7 @@ class HisNameIsYang:
 
     @truffle.tool("Uses the Perplexity AI search API to find relevant information", icon="magnifyingglass.circle.fill")
     def PerplexitySearch(self, search_query: str) -> str:
-        PERPLEXITY_API_KEY = "d2UgbWF5IGJlIGNyYXp5IGJ1dCB3ZSBhaW4ndCBzdHVwaWQ=" # you could also add a step that automatically asks the user for it with truffle.RequestUserInput! 
+        PERPLEXITY_API_KEY = os.getenv("PERPLEXITY_API_KEY")  # you could also add a step that automatically asks the user for it with truffle.RequestUserInput! 
         PERPLEXITY_MODEL = "llama-3.1-sonar-large-128k-online"
         PERPLEXITY_URL = "https://api.perplexity.ai/chat/completions"
 
@@ -208,5 +211,3 @@ class HisNameIsYang:
         
         #todo: implement trading once i work up the courage to give the Truffle all my money
         return f"Opened a {position} position on {ticker}!"
-    
-    
